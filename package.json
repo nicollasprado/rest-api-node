@@ -1,0 +1,24 @@
+{
+  "name": "restapi-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:nicollasprado/rest-api-node.git",
+  "author": "nicollasprado <nicollasprado.profissional@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.2",
+    "@types/node": "^22.15.29",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}
