@@ -2,7 +2,7 @@
   "name": "restapi-node",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:nicollasprado/rest-api-node.git",
+  "repository": "https://github.com/nicollasprado/rest-api-node",
   "author": "nicollasprado <nicollasprado.profissional@gmail.com>",
   "license": "MIT",
   "private": false,
