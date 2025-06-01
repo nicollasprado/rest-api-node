@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { StatusCodes } from "http-status-codes";
+import cityRouter from "./city.routes";
 
 const router = Router();
 
@@ -7,9 +7,6 @@ router.get("/", (req, res) => {
   res.send("Sucesso");
 });
 
-router.post("/add/:id", (req, res) => {
-  console.log(req.body, req.params.id, req.query.nome);
-  res.status(StatusCodes.CREATED).json(req.body);
-});
+router.use("/city", cityRouter);
 
 export default router;
