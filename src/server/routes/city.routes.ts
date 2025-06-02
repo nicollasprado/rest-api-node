@@ -3,11 +3,6 @@ import { CityController } from "./../controllers";
 
 const cityRouter = Router();
 
-cityRouter.post(
-  "/",
-  CityController.createBodyValidator,
-  CityController.createQueryValidator,
-  CityController.create,
-);
+cityRouter.post("/", CityController.createValidation, CityController.create);
 
 export default cityRouter;
