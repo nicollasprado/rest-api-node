@@ -2,7 +2,7 @@ import { RequestHandler } from "express";
 import { StatusCodes } from "http-status-codes";
 import { z } from "zod";
 
-type TAllowedFields = "body" | "query" | "header";
+type TAllowedFields = "body" | "query" | "header" | "params";
 type TAllSchemas = Record<TAllowedFields, z.AnyZodObject>;
 type TValidation = (schemas: Partial<TAllSchemas>) => RequestHandler;
 
