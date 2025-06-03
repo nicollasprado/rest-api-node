@@ -23,7 +23,14 @@ export const getAll = (
   req: Request<{}, {}, {}, TQueryProps>,
   res: Response,
 ) => {
-  const data = req.body;
+  // this will be changed in future
+  res.setHeader("access-control-expose-header", "x-total-count");
+  res.setHeader("x-total-count", 1);
 
-  res.status(StatusCodes.OK).send("Cidades");
+  res.status(StatusCodes.OK).json([
+    {
+      id: 1,
+      name: "Natal",
+    },
+  ]);
 };

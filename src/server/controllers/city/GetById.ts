@@ -21,5 +21,8 @@ export const getByIdValidation = validation({
 export const getById = (req: Request<IParamsProps>, res: Response) => {
   const cityData: IGetCity = req.body;
 
-  res.status(StatusCodes.OK).send("Cidade");
+  res.status(StatusCodes.OK).json({
+    id: 1,
+    name: "Natal",
+  });
 };

@@ -4,6 +4,7 @@ import { z } from "zod";
 import { validation } from "../../shared/middlewares";
 
 const bodySchema = z.object({
+  id: z.number().int(),
   name: z.string().min(3),
 });
 
@@ -16,5 +17,8 @@ export const createValidation = validation({
 export const create = (req: Request<{}, {}, TCity>, res: Response) => {
   const data = req.body;
 
-  res.status(StatusCodes.CREATED).send("Criado");
+  res.status(StatusCodes.CREATED).json({
+    id: 1,
+    name: "Natal",
+  });
 };

@@ -1,4 +1,5 @@
 export interface IGetCity {
+  id: number;
   name: string;
 }
 
