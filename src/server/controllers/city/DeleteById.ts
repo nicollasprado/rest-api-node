@@ -18,7 +18,5 @@ export const deleteByIdValidation = validation({
 });
 
 export const deleteById = (req: Request<IParamsProps>, res: Response) => {
-  const cityId: IParamsProps = req.params;
-
-  res.status(StatusCodes.OK);
+  res.status(StatusCodes.OK).send("deleted");
 };
