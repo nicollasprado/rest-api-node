@@ -5,10 +5,10 @@ import { validation } from "../../shared/middlewares";
 
 const querySchema = z.object({
   page: z.preprocess((value) => {
-    return Number(value);
+    if (value) return Number(value);
   }, z.number().int().positive().optional()),
   limit: z.preprocess((value) => {
-    return Number(value);
+    if (value) return Number(value);
   }, z.number().int().positive().optional()),
   filter: z.string().optional(),
 });
